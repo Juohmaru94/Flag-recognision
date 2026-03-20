@@ -1,0 +1,18 @@
+# Python cache / compiled artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Local virtual environments
+.venv/
+venv/
+
+# Runtime/debug output
+debug_captures/
+
+# Local config override
+config.json
+
+# Local flag datasets (keep folder docs only)
+assets/flags/*
+!assets/flags/README.md
