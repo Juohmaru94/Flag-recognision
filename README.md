@@ -69,7 +69,7 @@ Edit `config.json`:
 
 - `hotkey`: Global capture hotkey.
 - `fixed_region`: `{left, top, width, height}` rectangle in screen coordinates.
-- `confidence_threshold`: Skip typing below this score.
+- `confidence_threshold`: Legacy setting; currently ignored because the app always types the best guess.
 - `type_delay_ms`: Delay before typing.
 - `press_enter`: Press Enter after typing when `true`.
 - `debug`: Save captures to disk when enabled.
@@ -123,7 +123,7 @@ python main.py --calibrate --save-region
 3. The captured flag region is processed with the same pipeline.
 4. Cosine similarity is converted into a confidence score.
 5. The best match and top 3 candidates are logged.
-6. If confidence is below the configured threshold, the app logs `low confidence` and does not type.
+6. The app always types the best match and logs the confidence for reference.
 
 This approach is fast, fully offline, and robust to modest scaling changes.
 
@@ -135,7 +135,7 @@ The app logs:
 - top 3 candidate matches
 - selected result
 - confidence
-- typed output or skipped output
+- typed output
 
 ## Swapping in another backend later
 

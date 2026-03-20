@@ -31,10 +31,6 @@ class FlagRecognitionApp:
         logger.info("selected result: %s", match.country)
         logger.info("confidence: %.3f", match.confidence)
 
-        if match.confidence < self.config.confidence_threshold:
-            logger.info("skipped output: low confidence")
-            return
-
         self.typer.type_text(match.country)
         logger.info("typed output: %s", match.country)
 
