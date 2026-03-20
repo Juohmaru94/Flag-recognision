@@ -1,0 +1,17 @@
+{
+  "hotkey": "ctrl+shift+s",
+  "fixed_region": {
+    "left": 0,
+    "top": 0,
+    "width": 0,
+    "height": 0
+  },
+  "confidence_threshold": 0.72,
+  "type_delay_ms": 200,
+  "press_enter": false,
+  "debug": false,
+  "loop_interval_ms": 800,
+  "min_region_size": 12,
+  "dataset_dir": "assets/flags",
+  "debug_dir": "debug_captures"
+}
